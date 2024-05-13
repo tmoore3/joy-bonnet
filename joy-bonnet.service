@@ -1,0 +1,11 @@
+[Unit]
+Description=Joy Bonnet Service
+After=usbotg-config.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/joy-bonnet
+
+[Install]
+WantedBy=multi-user.target
